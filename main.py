@@ -1,8 +1,6 @@
 from modules.transferModule import TransferMethod
 import asyncio
-
-ACCOUNT_STATUSES = ('on', 'off')
-AGREEMENT_PHRASE = "YES, I AGREE"
+from consts.configuration import AGREEMENT_PHRASE, ACCOUNT_STATUSES, TIME_DELAY
 
 
 async def sendToWalletAccount():
@@ -24,7 +22,7 @@ async def sendToWalletAccount():
                             accountInfo) > 4 else None
 
                         await transferMethod.transferMethod(address, amount, token, mnemonics)
-                        await asyncio.sleep(100)
+                        await asyncio.sleep(TIME_DELAY)
                     except Exception as _:
                         print(f"Error processing account {
                               accountInfo[1]}")

@@ -4,19 +4,12 @@ from tonsdk.contract.wallet import Wallets, WalletVersionEnum
 import os
 from dotenv import load_dotenv
 from TonTools import *
+from consts.configuration import jetonDictionary
 
 load_dotenv()
 
 API_KEY = os.getenv('TON_API_KEY')
 MNEMONICS = os.getenv('MNEMONICS')
-
-
-jetonDictionary = {
-    'booba': 'EQCavQv8vsZ1waQnqz3lmGEw2HkUM2clUrzjJotwpwzrgcx4',
-    'shit': 'EQB4gPfG0YtoiJHCMTUuzxP9fKXy9nx6TFh-dcAltrnNpLNo',
-    'ston': 'EQDNhy-nxYFgUqzfUzImBEP67JqsyMIcyk2S5_RwNNEYku0k',
-    'durev': 'EQB02DJ0cdUD4iQDRbBv4aYG3htePHBRK1tGeRtCnatescK0'
-}
 
 
 class TransferMethod:
